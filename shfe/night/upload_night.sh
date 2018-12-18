@@ -32,6 +32,21 @@ function upload_files
 	scp -P 44163						u910019@101.231.3.117:/home/u910019/winfund/night229/x-shfe/tools/configurator.log ./
 	cat ./configurator.log
 	echo "--------------winfund: end  proc 910229--------------"
+
+
+	# 910101
+	echo "--------------winfund:begin  proc 910101--------------"
+	ssh -p 44163						u910019@101.231.3.117 'rm /home/u910019/winfund/night101/x-shfe/*night.so'
+	scp -P 44163 ./lib/packaged/*.so		u910019@101.231.3.117:/home/u910019/winfund/night101/x-shfe/
+	scp -P 44163 ./ev/*.txt					u910019@101.231.3.117:/home/u910019/winfund/night101/x-shfe/
+	scp -P 44163 ./ev/*.txt					u910019@101.231.3.117:/home/u910019/winfund/night101/x-shfe/tools/
+	scp -P 44163 ./101/*.csv				u910019@101.231.3.117:/home/u910019/winfund/night101/x-shfe/
+	scp -P 44163 ./101/*.csv				u910019@101.231.3.117:/home/u910019/winfund/night101/x-shfe/tools/
+	ssh -p 44163						u910019@101.231.3.117 'rm /home/u910019/winfund/night101/x-shfe/tools/*.log'
+	ssh -p 44163						   u910019@101.231.3.117 '/home/u910019/winfund/night101/x-shfe/tools/configurator.py'
+	scp -P 44163						    u910019@101.231.3.117:/home/u910019/winfund/night101/x-shfe/tools/configurator.log ./
+	cat ./configurator.log
+	echo "--------------winfund: end  proc 910101--------------"
 }
 
 ###################
