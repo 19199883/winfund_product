@@ -19,19 +19,21 @@ function upload_files
 #########################
 # winfund
 ###################
-	# 910097
-	echo "-----------winfund: begin proc 910097-----------------------"
-	ssh -p 44153							u910019@101.231.3.117 'rm /home/u910019/winfund/night097/x-dce/*night.so'
-	scp -P 44153 ./lib/packaged/*.so		u910019@101.231.3.117:/home/u910019/winfund/night097/x-dce/
-	scp -P 44153 ./ev/*.txt					u910019@101.231.3.117:/home/u910019/winfund/night097/x-dce/
-	scp -P 44153 ./ev/*.txt					u910019@101.231.3.117:/home/u910019/winfund/night097/x-dce/tools/
-	scp -P 44153 ./97/*.csv					u910019@101.231.3.117:/home/u910019/winfund/night097/x-dce/
-	scp -P 44153 ./97/*.csv					u910019@101.231.3.117:/home/u910019/winfund/night097/x-dce/tools/
-	ssh -p 44153							u910019@101.231.3.117 'rm /home/u910019/winfund/night097/x-dce/tools/*.log'
-	ssh -p 44153							u910019@101.231.3.117 '/home/u910019/winfund/night097/x-dce/tools/configurator.py'
-	scp -P 44153							u910019@101.231.3.117:/home/u910019/winfund/night097/x-dce/tools/configurator.log ./
+	# 910229
+	echo "-----------winfund: begin proc 910229-----------------------"
+	ssh -p 44153							u910019@101.231.3.117 'rm /home/u910019/winfund/night229/x-dce/*night.so'
+	ssh -p 44153							u910019@101.231.3.117 'rm /home/u910019/winfund/night229/x-dce/st*.txt'
+	ssh -p 44153							u910019@101.231.3.117 'rm /home/u910019/winfund/night229/x-dce/tools/st*.txt'
+	scp -Cp -P 44153 ./lib/packaged/*.so		    u910019@101.231.3.117:/home/u910019/winfund/night229/x-dce/
+	scp -Cp -P 44153 ./ev/*.txt					    u910019@101.231.3.117:/home/u910019/winfund/night229/x-dce/
+	scp -Cp -P 44153 ./ev/*.txt					    u910019@101.231.3.117:/home/u910019/winfund/night229/x-dce/tools/
+	scp -Cp -P 44153 ./229/*.csv					u910019@101.231.3.117:/home/u910019/winfund/night229/x-dce/
+	scp -Cp -P 44153 ./229/*.csv					u910019@101.231.3.117:/home/u910019/winfund/night229/x-dce/tools/
+	ssh -C -p 44153							u910019@101.231.3.117 'rm /home/u910019/winfund/night229/x-dce/tools/*.log'
+	ssh -C -p 44153							   u910019@101.231.3.117 '/home/u910019/winfund/night229/x-dce/tools/configurator.py'
+	scp -Cp -P 44153							    u910019@101.231.3.117:/home/u910019/winfund/night229/x-dce/tools/configurator.log ./
 	cat ./configurator.log
-	echo "-----------winfund: end proc 910097-----------------------"
+	echo "-----------winfund: end proc 910229-----------------------"
 }
 
 ###################
