@@ -18,18 +18,21 @@ function upload_files
 #########################
 # winfund
 ###################
-	# 910101
-	echo "--------------winfund: begin proc 910101---------"
-	scp -P 8012 ./lib/packaged/*.so		u910019@1.193.38.91:/home/u910019/winfund/day101/x-zce/
-	scp -P 8012 ./ev/*.txt				u910019@1.193.38.91:/home/u910019/winfund/day101/x-zce/
-	scp -P 8012 ./ev/*.txt				u910019@1.193.38.91:/home/u910019/winfund/day101/x-zce/tools/
-	scp -P 8012 ./101/*.csv				u910019@1.193.38.91:/home/u910019/winfund/day101/x-zce/
-	scp -P 8012 ./101/*.csv				u910019@1.193.38.91:/home/u910019/winfund/day101/x-zce/tools/
-	ssh -p 8012							u910019@1.193.38.91 'rm /home/u910019/winfund/day101/x-zce/tools/*.log'
-	ssh -p 8012							u910019@1.193.38.91 '/home/u910019/winfund/day101/x-zce/tools/configurator.py'
-	scp -P 8012							u910019@1.193.38.91:/home/u910019/winfund/day101/x-zce/tools/configurator.log ./
+	# 910097
+	echo "--------------winfund: begin proc 910097---------"
+	ssh -p 8012							u910019@1.193.38.91 'rm /home/u910019/winfund/day097/x-zce/*day.so'
+	ssh -p 8012							u910019@1.193.38.91 'rm /home/u910019/winfund/day097/x-zce/st*.txt'
+	ssh -p 8012							u910019@1.193.38.91 'rm /home/u910019/winfund/day097/x-zce/tools/st*.txt'
+	scp -Cp -P 8012 ./lib/packaged/*.so		u910019@1.193.38.91:/home/u910019/winfund/day097/x-zce/
+	scp -Cp -P 8012 ./ev/*.txt				u910019@1.193.38.91:/home/u910019/winfund/day097/x-zce/
+	scp -Cp -P 8012 ./ev/*.txt				u910019@1.193.38.91:/home/u910019/winfund/day097/x-zce/tools/
+	scp -Cp -P 8012 ./097/*.csv				u910019@1.193.38.91:/home/u910019/winfund/day097/x-zce/
+	scp -Cp -P 8012 ./097/*.csv				u910019@1.193.38.91:/home/u910019/winfund/day097/x-zce/tools/
+	ssh -C -p 8012							u910019@1.193.38.91 'rm /home/u910019/winfund/day097/x-zce/tools/*.log'
+	ssh -C -p 8012							u910019@1.193.38.91 '/home/u910019/winfund/day097/x-zce/tools/configurator.py'
+	scp -Cp -P 8012							u910019@1.193.38.91:/home/u910019/winfund/day097/x-zce/tools/configurator.log ./
 	cat ./configurator.log
-	echo "--------------winfund: end proc 910101---------"
+	echo "--------------winfund: end proc 910097---------"
 }
 
 ###################
