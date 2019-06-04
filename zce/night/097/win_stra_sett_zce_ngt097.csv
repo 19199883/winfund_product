@@ -1,9 +1,7 @@
 comm,strategy,contract,lot
-zzsr,st301a_zzsr_night,SR905,0
-zzta,st301a_zzta_night,TA905,0
-zzsr,st303a_zzsr_night,SR905,0
-zzta,st303a_zzta_night,TA905,0
-zzsr,st309a_zzsr_night,SR905,0
-zzta,st309a_zzta_night,TA905,0
-zzta,st311a_zzta_night,TA905,0
-zzta,st314a_zzta_night,TA905,0
+cf,tst8_zzcf_night,CF909,1
+ma,tst0_zzma_night,MA909,1
+rm,tst2_zzrm_night,RM909,1
+sr,tst7_zzsr_night,SR909,1
+ta,tst0_zzta_night,TA909,1
+zc,tst2_zzzc_night,ZC909,1
